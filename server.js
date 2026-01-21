@@ -16,6 +16,9 @@ dotenv.config()
 connectDB()
 
 const app = express()
+app.get("/", (req, res) => {
+  res.send("Backend is running successfully 🚀")
+})
 
 app.use(cors({
     origin: ["https://student-teacher-portal-six.vercel.app"],
